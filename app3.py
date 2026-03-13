@@ -2,16 +2,16 @@ import streamlit as st
 
 st.set_page_config(page_title="El Tutor de Silicio", layout="wide")
 
-# ---------- CSS ----------
+# ---------- ESTILOS ----------
 st.markdown("""
 <style>
 
-html, body, [class*="css"]  {
+html, body {
     font-family: "Georgia", serif;
 }
 
 .title{
-    font-size:60px;
+    font-size:55px;
     font-weight:700;
 }
 
@@ -19,21 +19,14 @@ html, body, [class*="css"]  {
     text-align:right;
     font-style:italic;
     font-size:20px;
-    margin-top:-20px;
-}
-
-.section{
-    height:80vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    margin-top:-15px;
 }
 
 .header{
-    font-size:40px;
-    font-family:Arial, sans-serif;
+    font-size:38px;
     color:#6b3fa0;
-    margin-bottom:30px;
+    margin-top:30px;
+    font-family:Arial, sans-serif;
 }
 
 .text{
@@ -42,196 +35,179 @@ html, body, [class*="css"]  {
     max-width:900px;
 }
 
-.nav{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin-top:40px;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
 
+# ---------- ÍNDICE LATERAL ----------
+st.sidebar.title("Índice")
+
+section = st.sidebar.radio(
+    "",
+    [
+        "Título",
+        "Introducción",
+        "Un espejo que aprende a conocernos",
+        "La frialdad del dato frente al matiz del ensayo",
+        "El dilema del algoritmo",
+        "El futuro",
+        "Referencias"
+    ]
+)
+
+
 # ---------- CONTENIDO ----------
-sections = [
 
-{
-"title":"Título",
-"content":"""
-<div class='title'>El Tutor de Silicio: ¿Puede la Inteligencia Artificial Entender el Alma del Estudiante?</div>
-<div class='subtitle'>“En una era de máquinas dirigiendo humanos, ¿aún se necesita a los educadores?”</div>
-"""
-},
+if section == "Título":
 
-{
-"title":"Introducción",
-"content":"""
-<div class='header'>Introducción</div>
-<div class='text'>
-Imagínese a un estudiante sentado frente a su ordenador a las dos de la mañana. 
-Frustrado, murmura para sí mismo: "Nunca voy a entender esto, soy un desastre". 
-En ese instante, una pequeña notificación aparece en pantalla.
-
-No es un mensaje de un amigo despierto, sino una respuesta de un tutor inteligente 
-que ha detectado ese tono de derrota y ofrece una palabra de aliento precisa para 
-evitar que el desánimo gane la batalla.
-
-Esta escena es hoy el núcleo de un debate fascinante en la psicología educativa. 
-La Inteligencia Artificial ya no es solo una herramienta técnica, sino un sistema 
-capaz de emular procesos cognitivos complejos.
+    st.markdown("""
+<div class='title'>
+El Tutor de Silicio: ¿Puede la Inteligencia Artificial Entender el Alma del Estudiante?
 </div>
-"""
-},
 
-{
-"title":"Sección 1",
-"content":"""
-<div class='header'>Un espejo que aprende a conocernos</div>
-<div class='text'>
-Los algoritmos actuales pueden analizar grandes cantidades de datos educativos y 
-detectar patrones invisibles para los docentes humanos. Esto permite personalizar 
-la enseñanza y adaptarla al ritmo de aprendizaje de cada estudiante.
-
-Sin embargo, el paso de una educación estandarizada a una personalizada por 
-algoritmos abre preguntas sobre la autonomía del estudiante y el nuevo rol del docente.
+<div class='subtitle'>
+“En una era de máquinas dirigiendo humanos, ¿aún se necesita a los educadores?”
 </div>
-"""
-},
+""", unsafe_allow_html=True)
 
-{
-"title":"Sección 2",
-"content":"""
-<div class='header'>La frialdad del dato frente al matiz del ensayo</div>
+
+
+elif section == "Introducción":
+
+    st.markdown("<div class='header'>Introducción</div>", unsafe_allow_html=True)
+
+    st.markdown("""
 <div class='text'>
-La inteligencia artificial puede evaluar con gran precisión preguntas cerradas 
-y respuestas cortas. No obstante, cuando se trata de interpretar creatividad, 
-ironía o pensamiento crítico en ensayos complejos, su desempeño se vuelve más limitado.
 
-La máquina puede analizar estructuras del lenguaje, pero los humanos siguen siendo 
-mejores interpretando matices y significados profundos.
+Imagínese a un estudiante sentado frente a su ordenador a las dos de la mañana. Frustrado, murmura para sí mismo: "Nunca voy a entender esto, soy un desastre". En ese instante, una pequeña notificación aparece en pantalla. No es un mensaje de un amigo despierto, sino una respuesta de un tutor inteligente que ha detectado ese tono de derrota y ofrece una palabra de aliento precisa para evitar que el desánimo gane la batalla.  
+
+Esta escena, que parece extraída de una novela de Isaac Asimov, es hoy el núcleo de un debate fascinante en la psicología educativa. Ya no vemos a la Inteligencia Artificial (IA) solo como una calculadora sofisticada, sino como un sistema capaz de emular y potenciar nuestras funciones cognitivas más complejas.
+
 </div>
-"""
-},
+""", unsafe_allow_html=True)
 
-{
-"title":"Sección 3",
-"content":"""
-<div class='header'>IA y bienestar emocional</div>
+
+
+elif section == "Un espejo que aprende a conocernos":
+
+    st.markdown("<div class='header'>Un espejo que aprende a conocernos</div>", unsafe_allow_html=True)
+
+    st.markdown("""
 <div class='text'>
-Existen sistemas capaces de detectar auto-habla negativa en estudiantes y responder 
-con mensajes motivacionales. Aunque estas herramientas pueden apoyar el aprendizaje, 
-no sustituyen la intervención de profesionales en salud mental.
-</div>
-"""
-},
 
-{
-"title":"Sección 4",
-"content":"""
-<div class='header'>El dilema del algoritmo: ¿Aliado o vigilante?</div>
+En el corazón de esta revolución se encuentra la capacidad de los algoritmos para procesar el "Big Data", esa marea invisible de información que generamos al navegar. Como explican los investigadores Azman y Tümkaya (2025), esta integración no es solo técnica; es una oportunidad para personalizar el aprendizaje. La IA puede identificar patrones de estudio que para un profesor humano, con treinta alumnos a cargo, serían invisibles. Es, en esencia, un sistema que se adapta al ritmo y estilo de cada mente.  
+
+Sin embargo, esta simbiosis entre tecnología y psicología no es sencilla. El paso de una enseñanza estandarizada —donde todos leen la misma página al mismo tiempo— a una personalizada por algoritmos, nos obliga a repensar qué tan autónomo es el estudiante y cuál es el nuevo rol del docente. Como sugieren Al-Zahrani y Alasmari (2024), aunque hay entusiasmo por la innovación, estamos ante una reconfiguración total de la educación, donde la ética debe ser el eje que guíe cada decisión de la máquina.
+
+</div>
+""", unsafe_allow_html=True)
+
+
+
+elif section == "La frialdad del dato frente al matiz del ensayo":
+
+    st.markdown("<div class='header'>La frialdad del dato frente al matiz del ensayo</div>", unsafe_allow_html=True)
+
+    st.markdown("""
 <div class='text'>
-La implementación de IA en la educación requiere un contrato ético basado en 
-transparencia, privacidad y control humano.
 
-Sin regulaciones adecuadas, el uso de datos académicos podría convertir el aula 
-en un espacio de vigilancia constante.
+¿Podría una máquina calificar tus exámenes mejor que un profesor? La respuesta es un "sí" a medias. Investigaciones recientes de Jukiewicz y Wyrwa (2026) revelan que modelos de lenguaje como ChatGPT son asombrosamente precisos en preguntas cerradas y respuestas cortas, alcanzando niveles de eficacia humanos.  
+
+Pero aquí aparece una grieta. Cuando se trata de evaluar la creatividad o la profundidad crítica de un ensayo universitario, la IA empieza a tartamudear. Jackaria y sus colegas (2024) observaron que, si bien la IA es impecable aplicando reglas rígidas, carece de la "piel" necesaria para captar la ironía, la pasión o la sutileza de un argumento bien construido. La máquina lee el texto, pero el humano lee entre líneas.  
+
+Esta limitación se extiende también al bienestar emocional. Aunque existen tutores inteligentes capaces de responder al "auto-habla negativa" de un alumno para mitigar el desánimo (Thomas et al., 2024), debemos ser cautos. Jukiewicz (2025) advierte que la IA es una excelente herramienta de apoyo, pero no puede —ni debe— sustituir a un psicólogo clínico en situaciones de crisis profunda o riesgos graves de salud mental.
+
 </div>
-"""
-},
+""", unsafe_allow_html=True)
 
-{
-"title":"Sección 5",
-"content":"""
-<div class='header'>El futuro: el toque humano en la era digital</div>
+
+
+elif section == "El dilema del algoritmo":
+
+    st.markdown("<div class='header'>El dilema del algoritmo: ¿Aliado o vigilante?</div>", unsafe_allow_html=True)
+
+    st.markdown("""
 <div class='text'>
-El modelo educativo emergente propone un sistema híbrido llamado 
-human-in-the-loop: la máquina analiza y propone, pero el humano supervisa y decide.
 
-El objetivo no es reemplazar a los docentes, sino potenciar la inteligencia humana.
+La eficacia de la IA en las aulas está condicionada por un "contrato ético". Según Nguyen y su equipo (2023), existen principios que no podemos negociar: transparencia, privacidad y control humano.  
+
+El desafío más crítico es la privacidad. Bako (2025) advierte que la recolección constante de datos académicos podría convertir la escuela en un entorno de vigilancia si no existen reglas estrictas. Además, existe el riesgo del "sesgo algorítmico": si los datos con los que se entrena a la IA no representan a todos, el sistema podría acabar discriminando a minorías, perpetuando desigualdades que ya creíamos superadas (Eden et al., 2024).
+
 </div>
-"""
-},
+""", unsafe_allow_html=True)
 
-{
-"title":"Ideas clave",
-"content":"""
-<div class='header'>Ideas Clave</div>
+
+
+elif section == "El futuro":
+
+    st.markdown("<div class='header'>El futuro: El toque humano en la era digital</div>", unsafe_allow_html=True)
+
+    st.markdown("""
 <div class='text'>
-• La IA puede personalizar el aprendizaje analizando grandes volúmenes de datos.  
-• Su desempeño es alto en tareas estructuradas, pero limitado en análisis subjetivo.  
-• El uso ético requiere transparencia, privacidad y supervisión humana.  
-• La educación del futuro probablemente será híbrida: humanos + IA.
+
+Quizás el mayor temor sea que el exceso de pantallas erosione la conexión empática entre maestro y alumno. La síntesis de las investigaciones actuales apunta hacia un modelo de "IA ética" donde la automatización nunca camina sola. Es lo que los expertos llaman human-in-the-loop: la máquina propone, pero el humano supervisa y decide.  
+
+La integración de la IA no es un destino al que hemos llegado, sino un proceso constante de negociación. El objetivo final no es que las máquinas piensen como nosotros, sino que nos ayuden a pensar mejor, garantizando que el futuro de la educación sea tan inteligente como profundamente humano.
+
 </div>
-"""
-},
+""", unsafe_allow_html=True)
 
-{
-"title":"Cierre",
-"content":"""
-<div class='header'>Cierre</div>
-<div class='text'>
-La integración de la inteligencia artificial en la educación no es un destino 
-final, sino un proceso continuo de adaptación.
-
-La meta no es que las máquinas piensen como nosotros, sino que nos ayuden a 
-pensar mejor y construir un aprendizaje más humano.
-</div>
-"""
-}
-
-]
-
-# ---------- SESSION STATE ----------
-if "page" not in st.session_state:
-    st.session_state.page = 0
-
-
-# ---------- MOSTRAR SECCIÓN ----------
-current = sections[st.session_state.page]
-
-st.markdown(f"<div class='section'>{current['content']}</div>", unsafe_allow_html=True)
-
-
-# ---------- NAVEGACIÓN ----------
-col1, col2, col3 = st.columns([1,2,1])
-
-with col1:
-    if st.session_state.page > 0:
-        if st.button("⬅ Anterior"):
-            st.session_state.page -= 1
-            st.rerun()
-
-with col3:
-    if st.session_state.page < len(sections)-1:
-        if st.button("Siguiente ➡"):
-            st.session_state.page += 1
-            st.rerun()
 
 
 # ---------- REFERENCIAS ----------
-if st.session_state.page == len(sections)-1:
+elif section == "Referencias":
 
     st.markdown("## Referencias")
 
-    refs = {
-        "Al-Zahrani (2024)":("https://doi.org/10.1016/j.heliyon.2024.e30696",
-        "Analiza impactos negativos de la IA como aislamiento estudiantil y dependencia tecnológica."),
-        
-        "Azman & Tümkaya (2025)":("https://doi.org/10.12688/f1000research.160011.1",
-        "Explica el potencial de tutorías personalizadas mediante IA y la necesidad de marcos éticos."),
-        
-        "Bako (2025)":("https://doi.org/10.30574/wjaets.2025.15.1.0262",
-        "Discute el equilibrio entre automatización educativa y privacidad estudiantil."),
-        
-        "Eden et al. (2024)":("https://doi.org/10.30574/msarr.2024.10.2.0039",
-        "Analiza oportunidades y desafíos éticos en la integración de IA educativa."),
-        
-        "Jukiewicz & Wyrwa (2026)":("https://doi.org/10.3390/app16020680",
-        "Revisión de estudios sobre evaluación automatizada con modelos de lenguaje.")
+    references = {
+        "Al-Zahrani (2024)": (
+            "https://doi.org/10.1016/j.heliyon.2024.e30696",
+            """Adoptando una perspectiva opuesta a las narrativas tecnológicamente optimistas, el estudio saca a la luz las "sombras" o los impactos negativos implícitos de la IA en la educación. Mediante encuestas, corrobora grandes preocupaciones sobre el aislamiento estudiantil, el sesgo de los algoritmos, la pérdida de habilidades de pensamiento crítico y la sobre-dependencia de contenido generado."""
+        ),
+
+        "Al-Zahrani & Alasmari (2024)": (
+            "https://doi.org/10.1057/s41599-024-03432-4",
+            """El estudio explora el impacto de la inteligencia artificial en la educación superior analizando sus implicaciones éticas, sociales y educativas. Señala preocupaciones sobre aislamiento estudiantil, sesgo algorítmico y dependencia excesiva de contenido generado por IA."""
+        ),
+
+        "Azman & Tümkaya (2025)": (
+            "https://doi.org/10.12688/f1000research.160011.1",
+            """El artículo provee un vistazo amplio al impacto de la IA en el aprendizaje. Resalta que su capacidad de crear tutorías personalizadas y métricas asertivas es muy prometedora, no obstante requiere consejos de revisión ética escolares, desarrollo profesional docente y marcos regulatorios."""
+        ),
+
+        "Bako (2025)": (
+            "https://doi.org/10.30574/wjaets.2025.15.1.0262",
+            """El artículo aborda la tensión entre aprovechar los beneficios analíticos de la IA para instrucción individualizada y mantener la privacidad estudiantil. Concluye que su implementación debe acompañarse de marcos regulatorios sólidos."""
+        ),
+
+        "Eden et al. (2024)": (
+            "https://doi.org/10.30574/msarr.2024.10.2.0039",
+            """Revisión del panorama general de la IA en educación. Destaca su potencial para crear entornos de aprendizaje inmersivos y automatizar tareas administrativas, pero advierte sobre brecha digital y discriminación algorítmica."""
+        ),
+
+        "Jackaria et al. (2024)": (
+            "https://doi.org/10.26803/ijlter.23.2.23",
+            """Estudio comparativo entre evaluaciones de ensayos realizadas por profesores y ChatGPT. Los resultados muestran que la IA tiende a otorgar calificaciones ligeramente más altas y que la concordancia con evaluadores humanos es limitada."""
+        ),
+
+        "Jukiewicz (2025)": (
+            "https://doi.org/10.3389/feduc.2025.1594572",
+            """Documenta cómo la IA generativa transforma la enseñanza y el bienestar estudiantil. Señala beneficios en accesibilidad educativa pero riesgos en integridad académica y salud mental."""
+        ),
+
+        "Jukiewicz & Wyrwa (2026)": (
+            "https://doi.org/10.3390/app16020680",
+            """Revisión de 42 estudios sobre el uso de IA generativa para calificar tareas. Concluye que funciona bien en tareas estructuradas pero falla en evaluaciones complejas y subjetivas."""
+        ),
+
+        "Thomas et al. (2024)": (
+            "https://doi.org/10.1145/3657604.3664700",
+            """Estudio sobre tutores que responden a estudiantes con autodiálogo negativo. Demuestra que modelos de lenguaje pueden evaluar respuestas educativas con niveles cercanos a evaluadores humanos."""
+        )
     }
 
-    for r in refs:
-        with st.expander(r):
-            st.write(refs[r][1])
-            st.link_button("Abrir artículo", refs[r][0])
+    for ref in references:
+
+        with st.expander(ref):
+            st.write(references[ref][1])
+            st.link_button("Ir al artículo", references[ref][0])
