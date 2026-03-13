@@ -161,47 +161,52 @@ elif section == "Referencias":
 
     references = {
 
-        "Al-Zahrani, A. M. (2024)": (
+        "Al-Zahrani, A. M. (2024). Unveiling the shadows: Beyond the hype of AI in education. Heliyon, 10(10), e30696.": (
             "https://doi.org/10.1016/j.heliyon.2024.e30696",
             """Adoptando una perspectiva opuesta a las narrativas tecnológicamente optimistas, el estudio saca a la luz las "sombras" o los impactos negativos implícitos de la IA en la educación. Mediante encuestas, corrobora grandes preocupaciones sobre el aislamiento estudiantil, el sesgo de los algoritmos, la pérdida de habilidades de pensamiento crítico y la sobre-dependencia de contenido generado."""
         ),
 
-        "Al-Zahrani, A. M., & Alasmari, T. M. (2024)": (
+        "Al-Zahrani, A. M., & Alasmari, T. M. (2024). Exploring the impact of artificial intelligence on higher education: The dynamics of ethical, social, and educational implications. Humanities and Social Sciences Communications, 11(1), 912.": (
             "https://doi.org/10.1057/s41599-024-03432-4",
             """Adoptando una perspectiva opuesta a las narrativas tecnológicamente optimistas, el estudio saca a la luz las "sombras" o los impactos negativos implícitos de la IA en la educación. Mediante encuestas, corrobora grandes preocupaciones sobre el aislamiento estudiantil, el sesgo de los algoritmos, la pérdida de habilidades de pensamiento crítico y la sobre-dependencia de contenido generado."""
         ),
 
-        "Azman, Ö., & Tümkaya, S. (2025)": (
+        "Azman, Ö., & Tümkaya, S. (2025). Navigating the ethical landscape of AI integration in education: Balancing innovation and responsibility. F1000Research, 14, 299.": (
             "https://doi.org/10.12688/f1000research.160011.1",
             """El artículo provee un vistazo amplio al impacto de la Inteligencia Artificial en el aprendizaje. Resalta que su capacidad de crear tutorías personalizadas y métricas asertivas es muy prometedora, no obstante, requiere imperativamente de consejos de revisión ética escolares, desarrollo profesional constante para docentes y marcos regulatorios ajustables ante los riesgos de privacidad y manipulación sesgada de las máquinas."""
         ),
 
-        "Bako, N. Z. (2025)": (
+        "Bako, N. Z. (2025). Ethical AI in schools: Balancing automation, privacy, and human oversight. World Journal of Advanced Engineering Technology and Sciences, 15(01), 924-934.": (
             "https://doi.org/10.30574/wjaets.2025.15.1.0262",
             """El artículo aborda la tensión entre aprovechar los beneficios analíticos de la IA para instrucción individualizada y la necesidad de mantener a salvo la privacidad de los menores y el criterio humano. Sostiene que una implementación exitosa debe fundirse inexcusablemente con marcos regulatorios sólidos, como GDPR y COPPA, para evitar sesgos sistémicos."""
         ),
 
-        "Eden, C. A., Chisom, O. N., & Adeniyi, I. S. (2024)": (
+        "Eden, C. A., Chisom, O. N., & Adeniyi, I. S. (2024). Integrating AI in education: Opportunities, challenges, and ethical considerations. Magna Scientia Advanced Research and Reviews, 10(02), 006-013.": (
             "https://doi.org/10.30574/msarr.2024.10.2.0039",
             """Esta revisión analiza el panorama general de la IA en la educación, balanceando su potencial transformador para crear entornos inmersivos y automatizar tareas administrativas con los enormes desafíos éticos que representa. Subraya que la IA podría ampliar drásticamente la brecha digital y propagar discriminaciones sociales si no existe una supervisión y diseño conscientes."""
         ),
 
-        "Jackaria, P. M., Hajan, B. H., & Mastul, A. R. H. (2024)": (
+        "Jackaria, P. M., Hajan, B. H., & Mastul, A. R. H. (2024). A comparative analysis of the rating of college students' essays by ChatGPT versus human raters. International Journal of Learning, Teaching and Educational Research, 23(2), 478-492.": (
             "https://doi.org/10.26803/ijlter.23.2.23",
             """Este estudio comparativo analizó la calificación de ensayos de estudiantes universitarios filipinos realizada por tres profesores humanos y por el modelo ChatGPT 3.5. Encontró que las notas de la IA fueron leve y consistentemente más altas en cuatro rúbricas, pero la relación lineal (concordancia general) entre humanos y máquina resultó pobre, sugiriendo cautela a los docentes."""
         ),
 
-        "Jukiewicz, M. (2025)": (
+        "Jukiewicz, M. (2025). How generative artificial intelligence transforms teaching and influences student wellbeing in future education. Frontiers in Education, 10, 1594572.": (
             "https://doi.org/10.3389/feduc.2025.1594572",
             """El estudio documenta extensamente el fenómeno de la IA generativa como un factor transformador ambivalente. Si bien optimiza la docencia y democratiza los accesos, la IA también amenaza severamente la integridad académica, promueve el asilamiento social y su uso resulta deficiente e incluso riesgoso en las áreas de salud mental y prevención del suicidio de los estudiantes."""
         ),
 
-        "Jukiewicz, M., & Wyrwa, M. (2026)": (
+        "Jukiewicz, M., & Wyrwa, M. (2026). Can ChatGPT replace the teacher in assessment? A review of research on the use of large language models in grading and providing feedback. Applied Sciences, 16(2), 680.": (
             "https://doi.org/10.3390/app16020680",
             """Al analizar 42 estudios empíricos, esta investigación determina si los modelos de IA generativa logran reemplazar a los maestros evaluando y retroalimentando. Revela que las inteligencias artificiales funcionan excelentemente en cuestionarios cortos o tareas de codificación precisas, pero tambalean ante tareas complejas o altamente subjetivas, recomendando finalmente mantener su función únicamente como sistemas híbridos de soporte."""
         ),
+ 
+        "Nguyen, A., Ngo, H. N., Hong, Y., Dang, B., & Nguyen, B. P. T. (2023). Ethical principles for artificial intelligence in education. Education and Information Technologies, 28, 4221-4241.": (
+            "https://doi.org/10.1007/s10639-022-11316-w",
+            """Para abordar el debate sobre si existe un consenso mundial sobre ética en la IA, este documento conceptualiza un conjunto unificado de principios éticos para la inteligencia artificial en la educación (AIED). A través del análisis de directrices emitidas por organizaciones internacionales, ofrece directrices prácticas aplicables a la gobernanza, privacidad, explicabilidad y el papel humano."""
+        ),
 
-        "Thomas, D. R., Lin, J., Bhushan, S., Abboud, R., Gatz, E., Gupta, S., & Koedinger, K. R. (2024)": (
+        "Thomas, D. R., Lin, J., Bhushan, S., Abboud, R., Gatz, E., Gupta, S., & Koedinger, K. R. (2024). Learning and AI evaluation of tutors responding to students engaging in negative self-talk. In Proceedings of the Eleventh ACM Conference on Learning @ Scale (pp. 481-485). ACM.": (
             "https://doi.org/10.1145/3657604.3664700",
             """La investigación estudia a tutores interactuando en escenarios online donde los estudiantes expresan frustración personal ("autodiálogo negativo"). Encontraron que las lecciones mejoran significativamente las habilidades del tutor, y posteriormente demostraron que usar el modelo LLM GPT-4 para evaluar automáticamente las respuestas abiertas de los tutores arroja resultados altamente equiparables a la validación humana."""
         )
